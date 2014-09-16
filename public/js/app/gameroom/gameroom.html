@@ -1,0 +1,23 @@
+<section ng-cloack  class="gameRoom">
+	<h1 class="title" align="center"> Question Time </h1>
+	<div class="form-1">
+		<p style="color:black;">
+			{{question}}
+		</p>
+	</div>
+	<div style="height:20px;" class="alert">
+		<span ng-show="alert === 'Winner' "> Congrats!!!!! </span>
+		<span ng-show="alert === 'Incorrect' "> Try again.</span>
+		<span ng-show="alert === 'Loser'"> You Lost!</span>
+	</div>
+	<form class="form-1">
+		<p class="field">
+		<input type="text" ng-model="response"  name="response" placeholder="Your Response" />
+		<i class="icon-user icon-large"><img src="img/answer-icon2.png"/></i>
+		</p>
+		<p class="submit">
+		<button class="send-response" ng-click="submitResponse()">Send</button>
+		</p>
+	</form>
+</section>
+<div ng-include=" 'js/app/chat/chat.html' "></div>

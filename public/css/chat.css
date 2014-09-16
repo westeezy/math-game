@@ -1,0 +1,83 @@
+#chatWrapper{
+	position: fixed;
+	/*right: 10px;
+	top:0;
+	height: 90%;
+	min-width: 400px;*/
+	bottom: 0;
+	border: 1px solid black;
+	padding: 10px;
+	width: 100%;
+}
+
+#users{
+	height:100px;
+	overflow-y: auto;
+}
+
+#users ul li{
+	color: blue;
+ 	list-style: none;
+ 	padding: 0;
+ 	margin: 0;
+}
+
+/*.sendMessage{
+	position: absolute;
+	bottom: 10px;
+}*/
+.overflowable {
+  height: 150px;
+  overflow-y: auto;
+}
+
+.overflowable p {
+	color: #000;
+}
+
+.clr {
+  clear: both;
+}
+
+
+.bubble 
+{
+	margin-top: 10px;
+position: relative;
+width: 250px;
+height: 30px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border: #7F7F7F solid 2px;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 15px 11px;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: -11px;
+left: 15px;
+}
+
+.bubble:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 16px 12px;
+border-color: #7F7F7F transparent;
+display: block;
+width: 0;
+z-index: 0;
+top: -14px;
+left: 14px;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "math-game",
+  "version": "0.0.0",
+  "authors": [
+    "Westin <element9889@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.2.23",
+    "angular-mocks": "~1.2.23",
+    "angular": "~1.2.23"
+  }
+}

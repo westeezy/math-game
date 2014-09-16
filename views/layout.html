@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}such math so wow{% endblock %}</title>
+  <base href="/">
+
+  {% block head %}
+  <link rel="stylesheet" href="/css/app.css">
+  {% endblock %}
+</head>
+<body>
+  {% block content %}{% endblock %}
+
+	<script src="js/system/angular/angular.js"></script>
+	<script src="js/system/angular-route/angular-route.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+
+	<script src="js/app/app.js"></script>
+	<script src="js/app/socketService.js"></script>
+	<script src="js/app/common/localStorage.js"></script>
+	<script src="js/app/common/user.js"></script>
+	<script src="js/app/chat/chatCtrl.js"></script>
+	<script src="js/app/chat/stickyScroller.js"></script>
+	<script src="js/app/signon/signonCtrl.js"></script>
+	<script src="js/app/gameroom/gameroomCtrl.js"></script>
+
+</body>
+</html>
+
+

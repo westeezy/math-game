@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/chat.css">
+<div ng-cloack  ng-controller="ChatCtrl" id="chatWrapper">
+	<div>
+		<p>Your current user name is {{name}}</p>
+		<form ng-submit="changeName()">
+			<input ng-model="newName">
+			<input style="position:inline-block;" type="submit" value="Change Name">
+		</form>
+	</div>
+	<div id="users">
+		<h3> Users </h3>
+		<ul>
+			<li ng-repeat="user in users">{{user.name}}: {{user.points}}</li>
+		</ul>
+	</div>
+	<div>
+		
+		<div class="sendMessage">
+			<form ng-submit="sendMessage()">
+				<textarea size="60" placeholder="Type your message here" ng-model="message"></textarea>
+				<div><input class="send-message" type="submit" value="Send"></div>
+			</form>
+		</div>
+		<h3 style="margin-left:20px;">Messages:</h3>
+		<div sticky-scroller class="overflowable">
+			<div style="margin-left:25px;" ng-repeat="message in messages" ng-class="{alert: message.user == &quot;chatroom&quot;}">
+				<small>{{message.user}}</small> <br/>
+				<p class="bubble">{{message.text}}</p>
+			</div>
+		</div>
+	</div>
+</div>
