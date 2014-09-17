@@ -18,6 +18,7 @@ var io = require('socket.io')(server);
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.engine('html', swig.renderFile);
+//override controls for swig to work with angular
 swig.setDefaults({
     varControls: ['{%=', '%}']
 });

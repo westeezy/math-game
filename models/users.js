@@ -2,7 +2,7 @@
 
 // Keep track of which names are used so that there are no duplicates
 var userNames = (function() {
-    var names = {}; //{name: {points: 0}, ...}
+    var names = {};
 
     var claim = function(name) {
         if (!name || names[name]) {
@@ -28,7 +28,6 @@ var userNames = (function() {
         return name;
     };
 
-    // serialize claimed names as an array
     var get = function() {
         var res = [];
         for (var user in names) {
