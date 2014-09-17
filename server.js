@@ -34,7 +34,6 @@ if ('development' === app.get('env')) {
 }
 
 app.get('*', routes.index);
-app.get('/partials/:name', routes.partials);
 
 io.sockets.on('connection', function(socket) {
     socket = require('./routes/socket.js').listen(socket, io);
