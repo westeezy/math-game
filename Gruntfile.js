@@ -41,6 +41,9 @@ module.exports = function(grunt) {
             },
             travis: {
                 src: ['test/*.js'],
+            },
+            zombie: {
+                src: ['test/e2e/*.js']
             }
         },
 
@@ -64,7 +67,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-protractor-runner');
 
     // Default task(s).
-    grunt.registerTask('test', ['jshint', 'mochaTest:travis', 'karma:travis']);
-    grunt.registerTask('default', ['jshint', 'mochaTest:test', 'karma:unit', 'protractor:run']);
+    grunt.registerTask('test', ['jshint', 'mochaTest:travis', 'karma:travis', 'mochaTest:zombie']);
+    grunt.registerTask('default', ['jshint', 'mochaTest:test', 'karma:unit', 'mochaTest:zombie']);
 
 };
