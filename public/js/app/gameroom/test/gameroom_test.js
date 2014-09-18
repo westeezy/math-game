@@ -96,6 +96,16 @@ describe('gameroom tests', function() {
             expect(scope.response).toEqual('');
         }));
 
+        it('should have a flash message', function(done){
+            userMock.set('testUser');
+            location.path('/gameroom');
+            ctrl.flashMessage('test messsage');
+            expect(scope.alert).toEqual('test messsage');
+            setTimeout(function(){
+                expect(scope.alert).toEqual('');
+                done();
+            }, 4000);
 
+        });
     });
 });

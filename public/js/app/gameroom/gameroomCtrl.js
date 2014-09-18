@@ -33,6 +33,13 @@ controller('GameroomCtrl', [
             }
         };
 
+        this.flashMessage = function(message){
+            $scope.alert = message;
+            $timeout(function(){
+                $scope.alert = false;
+            }, 3000);
+        };
+
         this.initialize();
 
         socket.on('send:question', function(result) {
@@ -50,14 +57,10 @@ controller('GameroomCtrl', [
                     'answer': $scope.response
                 }, function(data) {
                     if (data) {
-                        $scope.alert = status['Winner'];
+                        self.flashMessage(status['Winner']);
                     } else {
-                        $scope.alert = status['Incorrect'];
+                        self.flashMessage(status['Incorrect']);
                     }
-
-                    $timeout(function() {
-                        $scope.alert = false;
-                    }, 3000);
                 });
             }
 
