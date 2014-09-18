@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                 configFile: 'karma.conf.js',
                 singleRun: true,
                 browsers: ['Chrome'],
-                reporters: ['progress']
+                reporters: ['progress', 'coverage']
             },
             travis: {
                 configFile: 'karma.conf.js'
