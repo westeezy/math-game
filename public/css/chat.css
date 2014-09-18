@@ -6,6 +6,10 @@
 	width: 100%;
 }
 
+#chatWrapper h3{
+	margin-left:20px;
+}
+
 #users{
 	height:100px;
 	overflow-y: auto;
@@ -29,6 +33,10 @@
 
 .clr {
   clear: both;
+}
+
+.chat-inner-wrapper{
+	margin-left:25px;
 }
 
 
@@ -72,4 +80,34 @@ width: 0;
 z-index: 0;
 top: -14px;
 left: 14px;
+}
+
+@media only screen and (max-width : 320px) {
+    .form-1{
+        width: 265px;
+    }
+
+    #chatWrapper{
+        position: relative;
+        margin-top: 70px;
+    }
+
+    #chatWrapper h3{
+		margin-left:0;
+	}
+
+    .change-name-form{
+    	display: none;
+    }
+    .users{
+    	height:40px;
+    }
+    .overflowable, .overflowable div{
+    	margin-left: 0!important;
+    }
+
+    .send-message input{
+    	width:100%;
+    	height:35px;
+    }
 }

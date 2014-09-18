@@ -186,12 +186,8 @@ input{
     transition: all 0.9s ease-out;
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width : 320px) {
     .form-1{
-        width: 265px;
-    }
-
-    #chatWrapper{
         width: 265px;
     }
 }
