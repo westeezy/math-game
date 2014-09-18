@@ -26,6 +26,8 @@ grunt test was for during development. typically I would set singlerun to false 
   * karma for front end tests in public/js/app/**/test/*.js using Chrome
   * mocha for backend tests in test/*.js
   * protractor for e2e tests in test/e2e/*.js
+  * coverage provided with grunt dev env in /coverage
+  * do not run app during karma or protractor tests as they will conflict with the app (sockets)
   
 #### Protractor Setup
  install java jdk then -
