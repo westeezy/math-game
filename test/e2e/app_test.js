@@ -33,8 +33,8 @@ describe('app', function() {
         });
 
         it('should use chat', function(){
-            var messageInput = element(by.tagName('textarea'));
-            var messageSend = element(by.className('send-message'));
+            var messageInput = element(by.className('send-message-input'));
+            var messageSend = element(by.className('send-message-btn'));
             messageInput.sendKeys('Hai');
             messageSend.click();
             var sender = element(by.binding('{{message.user}}')).getText();
