@@ -186,7 +186,7 @@ input{
     transition: all 0.9s ease-out;
 }
 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 400px) {
     .form-1{
         width: 265px;
     }
