@@ -1,25 +1,25 @@
 #chatWrapper{
-	position: fixed;
-	bottom: 0;
-	border: 1px solid black;
-	padding: 10px;
-	width: 100%;
+  position: fixed;
+  bottom: 0;
+  border: 1px solid black;
+  padding: 10px;
+  width: 100%;
 }
 
 #chatWrapper h3{
-	margin-left:20px;
+  margin-left:20px;
 }
 
 #users{
-	height:100px;
-	overflow-y: auto;
+  height:100px;
+  overflow-y: auto;
 }
 
 #users ul li{
-	color: blue;
- 	list-style: none;
- 	padding: 0;
- 	margin: 0;
+  color: blue;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .overflowable {
@@ -28,7 +28,7 @@
 }
 
 .overflowable p {
-	color: #000;
+  color: #000;
 }
 
 .clr {
@@ -36,78 +36,82 @@
 }
 
 .chat-inner-wrapper{
-	margin-left:25px;
+  margin-left:25px;
 }
 
 
+/*
+ * Chat bubble styles from http://www.ilikepixels.co.uk/drop/bubbler/
+ */
+
 .bubble 
 {
-	margin-top: 10px;
-position: relative;
-width: 250px;
-height: 30px;
-padding: 0px;
-background: #FFFFFF;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
-border: #7F7F7F solid 2px;
+  margin-top: 10px;
+  position: relative;
+  width: 250px;
+  height: 30px;
+  padding: 0px;
+  background: #FFFFFF;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: #7F7F7F solid 2px;
 }
 
 .bubble:after 
 {
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 0 15px 11px;
-border-color: #FFFFFF transparent;
-display: block;
-width: 0;
-z-index: 1;
-top: -11px;
-left: 15px;
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 15px 11px;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -11px;
+  left: 15px;
 }
 
 .bubble:before 
 {
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 0 16px 12px;
-border-color: #7F7F7F transparent;
-display: block;
-width: 0;
-z-index: 0;
-top: -14px;
-left: 14px;
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 16px 12px;
+  border-color: #7F7F7F transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  top: -14px;
+  left: 14px;
 }
 
 @media only screen and (max-width : 400px) {
-    .form-1{
-        width: 265px;
-    }
+  .form-1{
+    width: 265px;
+  }
 
-    #chatWrapper{
-        position: relative;
-        margin-top: 70px;
-    }
+  #chatWrapper{
+    position: relative;
+    margin-top: 70px;
+  }
 
-    #chatWrapper h3{
-		margin-left:0;
-	}
+  #chatWrapper h3{
+    margin-left:0;
+  }
 
-    .change-name-form{
-    	display: none;
-    }
-    .users{
-    	height:40px;
-    }
-    .overflowable, .overflowable div{
-    	margin-left: 0!important;
-    }
+  .change-name-form{
+    display: none;
+  }
+  .users{
+    height:40px;
+  }
+  .overflowable, .overflowable div{
+    margin-left: 0!important;
+  }
 
-    .send-message input{
-    	width:100%;
-    	height:35px;
-    }
+  .send-message input{
+    width:100%;
+    height:35px;
+  }
 }

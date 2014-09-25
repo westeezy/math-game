@@ -28,8 +28,9 @@ module.exports.listen = function (socket, io) {
   socket.on('get:question', function (data, fn) {
     game.createQuestion();
     socket.emit('send:question', game.currentQuestion());
-    if(fn)
+    if(fn){
       fn(game.currentQuestion());
+    }
   });
 
   socket.on('test:answer', function(data, fn){
@@ -41,16 +42,18 @@ module.exports.listen = function (socket, io) {
       var pts = userNames.addPoints(data.user, 10);
       socket.broadcast.emit('correct:answer', response);
       io.sockets.emit('change:score', {name: name, points: pts});
-      if(fn)
+      if(fn){
         fn(true);
+      }
 
       game.createQuestion(true);
       io.sockets.emit('send:question', game.currentQuestion());
       
     }else{
       socket.broadcast.emit('incorrect:answer', response);
-      if(fn)
+      if(fn){
         fn(false);
+      }
     }
   });
 
@@ -61,8 +64,9 @@ module.exports.listen = function (socket, io) {
     };
 
     socket.broadcast.emit('send:message', message);
-    if(fn)
+    if(fn){
       fn(message);
+    }
   });
 
   // validate a user's name change, and broadcast it on success
