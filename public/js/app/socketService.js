@@ -1,6 +1,6 @@
 'use strict';
 
-ServiceModule.factory('socket', function($rootScope) {
+ServiceModule.factory('socket',['$rootScope',  function($rootScope) {
     var socket = io.connect();
     return {
         on: function(eventName, callback) {
@@ -22,4 +22,4 @@ ServiceModule.factory('socket', function($rootScope) {
             });
         }
     };
-});
+}]);
