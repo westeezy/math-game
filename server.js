@@ -7,7 +7,8 @@ var express = require('express'),
     path = require('path'),
     errorHandler = require('errorhandler'),
     favicon = require('serve-favicon'),
-    swig = require('swig');
+    swig = require('swig'),
+    sockets = require('./routes/socket.js');
 
 var app = module.exports = express();
 
@@ -36,7 +37,7 @@ if ('development' === app.get('env')) {
 app.get('*', routes.index);
 
 io.sockets.on('connection', function(socket) {
-    socket = require('./routes/socket.js').listen(socket, io);
+    socket = sockets.listen(socket, io);
 });
 
 server.listen(app.get('port'), function() {
